@@ -15,6 +15,7 @@
 
 Ext.define('GTTrans.view.ResultadoCompletoView', {
     extend: 'Ext.Panel',
+    xtype:  'resultadoCompletoView',
 
     config: {
         layout: {

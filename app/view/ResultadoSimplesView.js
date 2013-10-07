@@ -15,6 +15,7 @@
 
 Ext.define('GTTrans.view.ResultadoSimplesView', {
     extend: 'Ext.Panel',
+    xtype:  'resultadoSimplesView',
 
     config: {
         scrollable: 'vertical',
@@ -69,7 +70,5 @@ Ext.define('GTTrans.view.ResultadoSimplesView', {
     },
 
     atualizar: function(record) {
-
     }
-
 });

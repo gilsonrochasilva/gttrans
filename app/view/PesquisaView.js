@@ -15,6 +15,7 @@
 
 Ext.define('GTTrans.view.PesquisaView', {
     extend: 'Ext.Panel',
+    xtype:  'pesquisaView',
 
     config: {
         layout: {
