@@ -3,8 +3,11 @@ Ext.define('GTTrans.controller.PesquisaController', {
     
     config : {
         refs : {
-            mainView        : "#mainView",
-            btPesquisar     : "#btPesquisar"
+            mainView                : "#mainView",
+            resultadoSimplesView    : "#resultadoSimplesView",
+            placa                   : "#tfPlaca",
+            renavam                 : "#tfRenavam",
+            btPesquisar             : "#btPesquisar"
         },
         
         control : {
@@ -15,6 +18,22 @@ Ext.define('GTTrans.controller.PesquisaController', {
     },
     
     pesquisar : function() {
+        var renavam = this.getRenavam().getValue();
         
+        var multaStore = Ext.getStore('multaStore');
+        multaStore.removeAll(true);
+        
+        var proxy = multaStore.getProxy();
+        proxy.setExtraParam('placa', this.getPlaca().getValue());
+        proxy.setExtraParam('renavam', renavam);
+            
+        multaStore.load(function(records, operation, success) {
+            console.log('loaded records: ' + records.length);
+            if(renavam != null) {
+                this.getMainView().avancar(2);
+            } else {
+                this.getMainView().avancar();
+            }
+        }, this);
     }
 });

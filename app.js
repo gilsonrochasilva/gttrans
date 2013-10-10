@@ -19,7 +19,8 @@ Ext.application({
     ],
             
     controllers: [
-        'HomeController'
+        'HomeController',
+        'PesquisaController'
     ],
             
     models: [
@@ -28,7 +29,7 @@ Ext.application({
     ],
             
     stores: [
-
+        'MultaStore'
     ],
             
     isIconPrecomposed: true,

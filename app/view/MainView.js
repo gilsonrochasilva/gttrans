@@ -24,13 +24,21 @@ Ext.define('GTTrans.view.MainView', {
         ]
     },
     
-    avancar : function() {
+    avancar : function(posicao) {
+        if (typeof(posicao) === "undefined") {
+            posicao = 1;
+        }
+        
         var selecionado = this.indexOf(this.getActiveItem());
-        this.animateActiveItem((selecionado + 1), {type : 'slide', direction : 'left'});
+        this.animateActiveItem((selecionado + posicao), {type : 'slide', direction : 'left'});
     },
 
-    voltar : function() {
+    voltar : function(posicao) {
+        if (typeof(posicao) === "undefined") {
+            posicao = 1;
+        }
+        
         var selecionado = this.indexOf(this.getActiveItem());
-        this.animateActiveItem((selecionado - 1), {type : 'slide', direction : 'right'});
+        this.animateActiveItem((selecionado - posicao), {type : 'slide', direction : 'right'});
     }
 });
