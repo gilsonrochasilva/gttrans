@@ -28,7 +28,7 @@ Ext.define('GTTrans.controller.PesquisaController', {
         proxy.setExtraParam('renavam', renavam);
             
         multaStore.load(function(records, operation, success) {
-            console.log('loaded records: ' + records.length);
+            Ext.Msg.alert('Title', 'The ' + records.length, Ext.emptyFn);
             if(renavam != null) {
                 this.getMainView().avancar(2);
             } else {
