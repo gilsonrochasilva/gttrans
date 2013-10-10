@@ -33,7 +33,7 @@
 
     <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"           value="2.9.0" />          <!-- all: current version of PhoneGap -->
-    <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
     <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
@@ -53,12 +53,10 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
-	
-	<gap:plugin name="com.phonegap.plugins.openfile" version="4.2.1" />
     
-	<!-- Define app icon for each platform. -->
-	<!-- 
-	<icon src="res/icons/icon.png" />
+    <!-- Define app icon for each platform. -->
+    <!-- 
+    <icon src="res/icons/icon.png" />
     <icon src="res/icons/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="res/icons/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="res/icons/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
@@ -74,8 +72,8 @@
     <icon src="res/icons/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
 	 -->
 	 
-	<icon src="res/icons/icon-57.png" />
-	<icon src="res/icons/icon-36.png" gap:platform="android"    gap:density="ldpi" />
+    <icon src="res/icons/icon-57.png" />
+    <icon src="res/icons/icon-36.png" gap:platform="android"    gap:density="ldpi" />
     <icon src="res/icons/icon-48.png" gap:platform="android"    gap:density="mdpi" />
     <icon src="res/icons/icon-72.png" gap:platform="android"    gap:density="hdpi" />
     <icon src="res/icons/icon-96.png" gap:platform="android"    gap:density="xhdpi" />
