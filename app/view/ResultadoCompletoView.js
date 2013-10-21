@@ -31,19 +31,21 @@ Ext.define('GTTrans.view.ResultadoCompletoView', {
                     {
                         xtype: 'container',
                         title: 'Proprietário',
+                        height: '100%',
                         layout: {
                             type: 'vbox'
                         },
-                        scrollable: 'vertical',
+                        
                         items: [
                             {
                                 xtype: 'fieldset',
-                                width: '95%',
+                                height: '100%',
                                 id: 'formProprietario',
                                 defaults: {
                                     labelAlign: 'top',
                                     readOnly: true
                                 },
+                                scrollable: 'vertical',
                                 items: [
                                     {
                                         xtype: 'textfield',
@@ -86,12 +88,13 @@ Ext.define('GTTrans.view.ResultadoCompletoView', {
                         layout: {
                             type: 'fit'
                         },
-                        scrollable: 'vertical',
+                        
                         items: [
                             {
                                 xtype: 'fieldset',
-                                width: '95%',
+                                height: '100%',
                                 id: 'formVeiculo',
+                                scrollable: 'vertical',
                                 defaults: {
                                     labelAlign: 'top',
                                     readOnly: true
@@ -134,10 +137,21 @@ Ext.define('GTTrans.view.ResultadoCompletoView', {
                     {
                         xtype: 'container',
                         title: 'Autuações',
+			height: '100%',
                         layout: {
                             type: 'vbox'
                         },
-                        scrollable: 'vertical'
+                        items : [
+                            {
+                                id          : 'autuacoesList',
+				xtype       : 'list',
+				itemTpl     : 'Nº: {ait}, Data: {dtAit}',
+				width       : '100%',
+				height      : '100%',
+				ui          : 'round',
+                                store       : 'multaStore'
+                            }
+                        ]
                     }
                 ]
             }
@@ -167,5 +181,8 @@ Ext.define('GTTrans.view.ResultadoCompletoView', {
         formVeiculo.down("#tfUf").setValue(records[0].get('sgUfplaca'));
         formVeiculo.down("#tfEspecie").setValue(records[0].get('dsEspeciedetran'));
         formVeiculo.down("#tfAutuacoes").setValue(records.length);
+        
+        var autuacoesList = Ext.ComponentQuery.query("#autuacoesList")[0];
+        autuacoesList.refresh();
     }
 });
