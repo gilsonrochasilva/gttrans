@@ -4,7 +4,7 @@ Ext.define('GTTrans.controller.ResultadoCompletoController', {
     config : {
         refs : {
             mainView                    : "#mainView",
-            btVoltarResultadoSimples    : "#btVoltarResultadoCompleto"
+            btVoltarResultadoCompleto   : "#btVoltarResultadoCompleto"
         },
         
         control : {
@@ -15,7 +15,6 @@ Ext.define('GTTrans.controller.ResultadoCompletoController', {
     },
    
     voltar : function() {
-        Ext.Msg.alert('Sobre', '=D');
         this.getMainView().voltar();
     }
 });

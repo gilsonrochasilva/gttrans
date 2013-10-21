@@ -20,7 +20,9 @@ Ext.application({
             
     controllers: [
         'HomeController',
-        'PesquisaController'
+        'PesquisaController',
+        'ResultadoSimplesController',
+        'ResultadoCompletoController'
     ],
             
     models: [

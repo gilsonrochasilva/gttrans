@@ -39,6 +39,7 @@ Ext.define('GTTrans.view.ResultadoCompletoView', {
                             {
                                 xtype: 'fieldset',
                                 width: '95%',
+                                id: 'formProprietario',
                                 defaults: {
                                     labelAlign: 'top',
                                     readOnly: true
@@ -90,6 +91,7 @@ Ext.define('GTTrans.view.ResultadoCompletoView', {
                             {
                                 xtype: 'fieldset',
                                 width: '95%',
+                                id: 'formVeiculo',
                                 defaults: {
                                     labelAlign: 'top',
                                     readOnly: true
@@ -140,6 +142,30 @@ Ext.define('GTTrans.view.ResultadoCompletoView', {
                 ]
             }
         ]
-    }
+    },
 
+    atualizar : function(records) {
+        var formProprietario = Ext.ComponentQuery.query("#formProprietario")[0];        
+        formProprietario.down("#tfNome").setValue(records[0].get('nmProprietario'));
+        formProprietario.down("#tfEndereco").setValue(records[0].get('nmLogradouroprop'));
+        formProprietario.down("#tfNumero").setValue(records[0].get('nrLogradouroprop'));
+        formProprietario.down("#tfComplemento").setValue(records[0].get('dsComplementoprop'));
+        formProprietario.down("#tfBairro").setValue(records[0].get('nmBairroprop'));
+        formProprietario.down("#tfUf").setValue(records[0].get('sgUfprop'));
+        
+        var placa = records[0].get('nrPlaca');
+        placa = placa.substr(0, 3) + '-' + placa.substr(3, 7);
+        
+        var formVeiculo = Ext.ComponentQuery.query("#formVeiculo")[0];
+        
+        var placa = records[0].get('nrPlaca');
+        placa = placa.substr(0, 3) + '-' + placa.substr(3, 7);
+        
+        formVeiculo.down("#tfPlaca").setValue(placa);
+        formVeiculo.down("#tfMarca").setValue(records[0].get('dsMarcadetran'));
+        formVeiculo.down("#tfCategoria").setValue(records[0].get('dsCategoria'));
+        formVeiculo.down("#tfUf").setValue(records[0].get('sgUfplaca'));
+        formVeiculo.down("#tfEspecie").setValue(records[0].get('dsEspeciedetran'));
+        formVeiculo.down("#tfAutuacoes").setValue(records.length);
+    }
 });

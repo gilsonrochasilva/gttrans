@@ -5,6 +5,7 @@ Ext.define('GTTrans.controller.PesquisaController', {
         refs : {
             mainView                    : "#mainView",
             resultadoSimplesView        : "#resultadoSimplesView",
+            resultadoCompletoView       : "#resultadoCompletoView",
             placa                       : "#tfPlaca",
             renavam                     : "#tfRenavam",
             btPesquisar                 : "#btPesquisar",
@@ -37,6 +38,7 @@ Ext.define('GTTrans.controller.PesquisaController', {
             if(success) {
                 if(records.length > 0) {
                     if(renavam != null) {
+                        _this.getResultadoCompletoView().atualizar(records);
                         _this.getMainView().avancar();
                     } else {
                         _this.getResultadoSimplesView().atualizar(records);
