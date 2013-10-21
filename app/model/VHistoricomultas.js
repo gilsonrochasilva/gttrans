@@ -1,15 +1,15 @@
 Ext.define('GTTrans.model.VHistoricomultas', {
     extend: 'Ext.data.Model',
 
-    uses: [
+    /*uses: [
         'GTTrans.model.VHistoricomultasID'
     ],
-
+*/
     config: {
-        hasOne: {
+        /*hasOne: {
             associatedName: 'id',
             model: 'GTTrans.model.VHistoricomultasID'
-        },
+        },*/
         fields: [
             {
                 name: 'cdSerie',
@@ -57,7 +57,7 @@ Ext.define('GTTrans.model.VHistoricomultas', {
             },
             {
                 name: 'dtLimitedefesa',
-                type: Ext.data.Types.DATE
+                type: Ext.data.Types.STRING
             },
             {
                 name: 'dsLocal',
@@ -149,11 +149,11 @@ Ext.define('GTTrans.model.VHistoricomultas', {
             },
             {
                 name: 'dtPagamento',
-                type: Ext.data.Types.DATE
+                type: Ext.data.Types.STRING
             },
             {
                 name: 'dtVencimento',
-                type: Ext.data.Types.DATE
+                type: Ext.data.Types.STRING
             },
             {
                 name: 'nrGuia',
@@ -185,11 +185,11 @@ Ext.define('GTTrans.model.VHistoricomultas', {
             },
             {
                 name: 'dtNait',
-                type: Ext.data.Types.DATE
+                type: Ext.data.Types.STRING
             },
             {
                 name: 'dtNap',
-                type: Ext.data.Types.DATE
+                type: Ext.data.Types.STRING
             },
             {
                 name: 'stDefesa',
@@ -219,8 +219,7 @@ Ext.define('GTTrans.model.VHistoricomultas', {
         
         proxy : {
             type                : 'ajax',
-            useDefaultXhrHeader : false,
-            url                 : 'http://gilson-note:8080/gttrans/ws/multa/consulta',
+            url                 : 'http://localhost:8080/gttrans/ws/multa/consulta',
             //url                 : 'http://www.belem.pa.gov.br/gttrans/ws/multa/consulta',
 
             reader : {

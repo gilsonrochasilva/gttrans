@@ -3,21 +3,27 @@ Ext.define('GTTrans.controller.PesquisaController', {
     
     config : {
         refs : {
-            mainView                : "#mainView",
-            resultadoSimplesView    : "#resultadoSimplesView",
-            placa                   : "#tfPlaca",
-            renavam                 : "#tfRenavam",
-            btPesquisar             : "#btPesquisar"
+            mainView                    : "#mainView",
+            resultadoSimplesView        : "#resultadoSimplesView",
+            placa                       : "#tfPlaca",
+            renavam                     : "#tfRenavam",
+            btPesquisar                 : "#btPesquisar",
+            btVoltarPesquisa    : "#btVoltarPesquisa"
         },
         
         control : {
             btPesquisar : {
                 tap : 'pesquisar'
+            },
+            
+            btVoltarPesquisa : {
+                tap : 'voltar'
             }
         }
     },
     
     pesquisar : function() {
+        var _this = this;
         var renavam = this.getRenavam().getValue();
         
         var multaStore = Ext.getStore('multaStore');
@@ -28,12 +34,24 @@ Ext.define('GTTrans.controller.PesquisaController', {
         proxy.setExtraParam('renavam', renavam);
             
         multaStore.load(function(records, operation, success) {
-            Ext.Msg.alert('Title', 'The ' + records.length, Ext.emptyFn);
-            if(renavam != null) {
-                this.getMainView().avancar(2);
+            if(success) {
+                if(records.length > 0) {
+                    if(renavam != null) {
+                        _this.getMainView().avancar();
+                    } else {
+                        _this.getResultadoSimplesView().atualizar(records);
+                        _this.getMainView().avancar(2);
+                    }
+                } else {
+                    Ext.Msg.alert('Alerta', 'Nenhum registro encontrado.', Ext.emptyFn);
+                }
             } else {
-                this.getMainView().avancar();
+                Ext.Msg.alert('Alerta', 'Erro ao tentar fazer a consulta. Por favor, verifique sua conexão com a internet.', Ext.emptyFn);
             }
         }, this);
+    },
+            
+    voltar : function() {
+        this.getMainView().voltar();
     }
 });
