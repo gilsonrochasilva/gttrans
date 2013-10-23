@@ -1,5 +1,5 @@
 Ext.define('GTTrans.controller.HomeController', {
-    extend      : 'Ext.app.Controller',
+    extend : 'Ext.app.Controller',
     
     config: {
         refs: {
