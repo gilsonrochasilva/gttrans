@@ -24,6 +24,24 @@ Ext.define('GTTrans.controller.HomeController', {
         }
     },
     
+    launch: function() {
+        var me = this;
+
+        document.addEventListener("backbutton",
+            function () {
+                var selecionado = me.getMainView().indexOf(me.getMainView().getActiveItem());
+
+                if(selecionado == 1) {
+                    me.voltar();
+                } else if(selecionado == 2) {
+                    me.voltar();
+                } else if(selecionado == 3) {
+                    me.voltar(2);;
+                }
+            }
+        , false);
+    },
+    
     avancar : function () {
         this.getMainView().avancar();
     },
