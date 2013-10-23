@@ -219,9 +219,9 @@ Ext.define('GTTrans.model.VHistoricomultas', {
         
         proxy : {
             type                : 'ajax',
-            url                 : 'http://10.1.3.49:8080/gttrans/ws/multa/consulta',
+            //url                 : 'http://10.1.3.49:8080/gttrans/ws/multa/consulta',
             //url                 : 'http://localhost:8080/gttrans/ws/multa/consulta',
-            //url                 : 'http://www.belem.pa.gov.br/gttrans/ws/multa/consulta',
+            url                 : 'http://www.belem.pa.gov.br/gttrans/ws/multa/consulta',
 
             reader : {
                 reader	: 'json',

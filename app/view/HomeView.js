@@ -21,7 +21,7 @@ Ext.define('GTTrans.view.HomeView', {
                 src	: 'res/images/logo.png',
                 width	: '240px',
                 height	: '232px',
-                margin	: '20 0 0 20'
+                margin	: '20 0 0 0'
             },
             {
                 xtype: 'button',
@@ -46,6 +46,13 @@ Ext.define('GTTrans.view.HomeView', {
                 ui: 'decline',
                 width: '75%',
                 text: 'Sair'
+            },
+            {
+                xtype	: 'image',
+                src	: 'res/images/logo_belem_h.png',
+                width	: '240px',
+                height	: '53px',
+                margin	: '20 0 0 0'
             }
         ]
     }
