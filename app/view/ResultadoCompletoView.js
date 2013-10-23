@@ -145,7 +145,7 @@ Ext.define('GTTrans.view.ResultadoCompletoView', {
                             {
                                 id          : 'autuacoesList',
 				xtype       : 'list',
-				itemTpl     : 'Nº: {ait}, Data: {dtAit}',
+				itemTpl     : '<span style="font-size:14px;">Nº: {ait}, Data: {dtAit}</span>',
 				width       : '100%',
 				height      : '100%',
 				ui          : 'round',

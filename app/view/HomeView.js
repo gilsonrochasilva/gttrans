@@ -17,6 +17,13 @@ Ext.define('GTTrans.view.HomeView', {
                 title: 'Consulta de Multas SeMOB'
             },
             {
+                xtype	: 'image',
+                src	: 'res/images/logo.png',
+                width	: '240px',
+                height	: '232px',
+                margin	: '20 0 0 20'
+            },
+            {
                 xtype: 'button',
                 id: 'btEntrar',
                 margin: '10px 0 0 0',
