@@ -32,11 +32,11 @@ Ext.define('GTTrans.controller.HomeController', {
                 var selecionado = me.getMainView().indexOf(me.getMainView().getActiveItem());
 
                 if(selecionado == 1) {
-                    me.voltar();
+                    me.getMainView().voltar();
                 } else if(selecionado == 2) {
-                    me.voltar();
+                    me.getMainView().voltar();
                 } else if(selecionado == 3) {
-                    me.voltar(2);
+                    me.getMainView().voltar(2);
                 }
             }
         , false);
