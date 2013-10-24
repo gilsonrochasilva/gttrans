@@ -6,7 +6,7 @@ Ext.define('GTTrans.controller.HomeController', {
             mainView            : "#mainView",
             btEntrar            : "#btEntrar",
             btSobre             : "#btSobre",
-            btSair              : "#btSair",
+            //btSair              : "#btSair",
             btVoltarPesquisa    : "#btVoltarPesquisa"
         },
         control: {
@@ -16,11 +16,11 @@ Ext.define('GTTrans.controller.HomeController', {
             
             btSobre : {
                 tap : 'sobre'
-            },
+            }/*,
             
             btSair : {
                 tap : 'sair'
-            }
+            }*/
         }
     },
     
@@ -36,7 +36,7 @@ Ext.define('GTTrans.controller.HomeController', {
                 } else if(selecionado == 2) {
                     me.voltar();
                 } else if(selecionado == 3) {
-                    me.voltar(2);;
+                    me.voltar(2);
                 }
             }
         , false);
@@ -48,9 +48,9 @@ Ext.define('GTTrans.controller.HomeController', {
             
     sobre : function () {
         Ext.Msg.alert('Sobre', 'Prefeitura Municipal de Belém.<br/>Todos os direitos reservados © 2013.<br/>Desenvolvido pela Equipe Web da Cinbesa.');
-    },
+    }/*,
             
     sair : function () {
         navigator.app.exitApp();
-    }
+    }*/
 });

@@ -39,14 +39,14 @@ Ext.define('GTTrans.view.HomeView', {
                 width: '75%',
                 text: 'Sobre'
             },
-            {
+            /*{
                 xtype: 'button',
                 id: 'btSair',
                 margin: '10px 0 0 0',
                 ui: 'decline',
                 width: '75%',
                 text: 'Sair'
-            },
+            },*/
             {
                 xtype	: 'image',
                 src	: 'res/images/logo_belem_h.png',
