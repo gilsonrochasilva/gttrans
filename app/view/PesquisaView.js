@@ -28,19 +28,22 @@ Ext.define('GTTrans.view.PesquisaView', {
                     {
                         xtype: 'textfield',
                         id: 'tfPlaca',
-                        label: 'Placa'
+                        label: 'Placa',
+                        value:'JTY-8069'
                     },
                     {
                         xtype: 'textfield',
                         disabled: true,
                         label: 'Para consulta detalhada informe também o Renavam',
                         labelWidth: '100%',
-                        labelWrap: true
+                        labelWrap: true,
+                        autoCorrect: true
                     },
                     {
                         xtype: 'numberfield',
                         id: 'tfRenavam',
-                        label: 'Renavam'
+                        label: 'Renavam',
+                        value: '704932903'
                     }
                 ]
             },

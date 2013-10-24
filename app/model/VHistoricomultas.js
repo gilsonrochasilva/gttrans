@@ -214,14 +214,26 @@ Ext.define('GTTrans.model.VHistoricomultas', {
             {
                 name: 'nrAgentevalidador',
                 type: Ext.data.Types.STRING
+            },
+            {
+                name: 'dtNaitFormatada',
+                type: Ext.data.Types.STRING
+            },
+            {
+                name: 'dtNapFormatada',
+                type: Ext.data.Types.STRING
+            },
+            {
+                name: 'linhaDigitavel',
+                type: Ext.data.Types.STRING
             }
         ],
         
         proxy : {
             type                : 'ajax',
             //url                 : 'http://10.1.3.49:8080/gttrans/ws/multa/consulta',
-            //url                 : 'http://localhost:8080/gttrans/ws/multa/consulta',
-            url                 : 'http://www.belem.pa.gov.br/gttrans/ws/multa/consulta',
+            url                 : 'http://localhost:8080/gttrans/ws/multa/consulta',
+            //url                 : 'http://www.belem.pa.gov.br/gttrans/ws/multa/consulta',
 
             reader : {
                 reader	: 'json',

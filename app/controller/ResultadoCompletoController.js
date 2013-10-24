@@ -4,17 +4,28 @@ Ext.define('GTTrans.controller.ResultadoCompletoController', {
     config : {
         refs : {
             mainView                    : "#mainView",
-            btVoltarResultadoCompleto   : "#btVoltarResultadoCompleto"
+            detalheAutuacaoView         : "#detalheAutuacaoView",
+            btVoltarResultadoCompleto   : "#btVoltarResultadoCompleto",
+            autuacoesList               : "#autuacoesList"
         },
         
         control : {
             btVoltarResultadoCompleto : {
                 tap : 'voltar'
+            },
+            
+            autuacoesList : {
+                select : 'onSelectAutuacaoList'
             }
         }
     },
    
     voltar : function() {
         this.getMainView().voltar();
+    },
+    
+    onSelectAutuacaoList : function(view, record) {
+        this.getDetalheAutuacaoView().atualizar(record);
+        this.getMainView().avancar(2);
     }
 });

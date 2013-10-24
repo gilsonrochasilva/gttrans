@@ -8,7 +8,8 @@ Ext.define('GTTrans.view.MainView', {
         'GTTrans.view.HomeView',
         'GTTrans.view.PesquisaView',
         'GTTrans.view.ResultadoCompletoView',
-        'GTTrans.view.ResultadoSimplesView'
+        'GTTrans.view.ResultadoSimplesView',
+        'GTTrans.view.DetalheAutuacaoView'
     ],
 
     config: {
@@ -20,7 +21,8 @@ Ext.define('GTTrans.view.MainView', {
             { xtype : 'homeView' },
             { xtype : 'pesquisaView' },
             { xtype : 'resultadoCompletoView' },
-            { xtype : 'resultadoSimplesView' }
+            { xtype : 'resultadoSimplesView' },
+            { xtype : 'detalheAutuacaoView' }
         ]
     },
     

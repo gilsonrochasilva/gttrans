@@ -22,7 +22,8 @@ Ext.application({
         'HomeController',
         'PesquisaController',
         'ResultadoSimplesController',
-        'ResultadoCompletoController'
+        'ResultadoCompletoController',
+        'DetalheAutuacaoController'
     ],
             
     models: [
