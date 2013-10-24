@@ -6,7 +6,7 @@ Ext.define('GTTrans.controller.DetalheAutuacaoController', {
             mainView                : "#mainView",
             btVoltarDetalheAutuacao : "#btVoltarDetalheAutuacao",
             btCopiarCodigoBarras    : "#btCopiarCodigoBarras",
-            tfCodigoBarras    : "#tfCodigoBarras"
+            tfCodigoBarras          : "#tfCodigoBarras"
         },
         
         control : {
@@ -25,7 +25,8 @@ Ext.define('GTTrans.controller.DetalheAutuacaoController', {
     },
     
     copiarCodigoBarras : function() {
-        window.plugins.copy(this.getTfCodigoBarras().getLabel(),
+        Ext.Msg.alert('Código de Barras', this.getTfCodigoBarras().getLabel(), Ext.emptyFn);
+        window.plugins.clipboard.copy(this.getTfCodigoBarras().getLabel(),
             function() {
                 Ext.Msg.alert('Código de Barras', 'Código de barras copiado com sucesso.<\br>Agora você pode usar a opção colar em outro aplicativo.', Ext.emptyFn);
             },
