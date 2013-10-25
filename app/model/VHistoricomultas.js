@@ -226,6 +226,10 @@ Ext.define('GTTrans.model.VHistoricomultas', {
             {
                 name: 'linhaDigitavel',
                 type: Ext.data.Types.STRING
+            },
+            {
+                name: 'linhaDigitavelFormatada',
+                type: Ext.data.Types.STRING
             }
         ],
         

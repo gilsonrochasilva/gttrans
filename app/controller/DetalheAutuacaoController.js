@@ -25,10 +25,9 @@ Ext.define('GTTrans.controller.DetalheAutuacaoController', {
     },
     
     copiarCodigoBarras : function() {
-        Ext.Msg.alert('Código de Barras', this.getTfCodigoBarras().getLabel(), Ext.emptyFn);
-        window.plugins.clipboard.copy(this.getTfCodigoBarras().getLabel(),
+        window.plugins.clipboard.copy(this.getTfCodigoBarras().getValue(),
             function() {
-                Ext.Msg.alert('Código de Barras', 'Código de barras copiado com sucesso.<\br>Agora você pode usar a opção colar em outro aplicativo.', Ext.emptyFn);
+                Ext.Msg.alert('Código de Barras', 'Código de barras copiado com sucesso.<br />Agora você pode usar o COLAR em outro aplicativo.', Ext.emptyFn);
             },
             function() {
                 Ext.Msg.alert('Alerta', 'Não foi possível copiar o código de barras.', Ext.emptyFn);

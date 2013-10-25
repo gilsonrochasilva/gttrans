@@ -84,6 +84,7 @@ Ext.define('GTTrans.view.DetalheAutuacaoView', {
                 ]
             },
             {
+                margin: '0 0 10px 0',
                 xtype: 'button',
                 id: 'btCopiarCodigoBarras',
                 ui: 'action',
@@ -104,6 +105,7 @@ Ext.define('GTTrans.view.DetalheAutuacaoView', {
         formDetalheAutuacao.down("#tfRecursoCETRAN").setValue(record.get('stRecursocetran'));
         
         var formCodigoBarras = Ext.ComponentQuery.query("#formCodigoBarras")[0];        
-        formCodigoBarras.down("#tfCodigoBarras").setLabel(record.get('linhaDigitavel'));
+        formCodigoBarras.down("#tfCodigoBarras").setLabel(record.get('linhaDigitavelFormatada'));
+        formCodigoBarras.down("#tfCodigoBarras").setValue(record.get('linhaDigitavel'));
     }
 });
