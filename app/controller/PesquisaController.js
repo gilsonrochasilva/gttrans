@@ -33,8 +33,12 @@ Ext.define('GTTrans.controller.PesquisaController', {
         var proxy = multaStore.getProxy();
         proxy.setExtraParam('placa', this.getPlaca().getValue());
         proxy.setExtraParam('renavam', renavam);
+        
+        Ext.Viewport.mask({ xtype: 'loadmask', message: "Carregando..." });
             
         multaStore.load(function(records, operation, success) {
+            Ext.Viewport.unmask();
+            
             if(success) {
                 if(records.length > 0) {
                     if(renavam != null) {
