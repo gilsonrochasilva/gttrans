@@ -19,10 +19,11 @@
     <!--
         Enable individual API permissions here.
         The "device" permission is required for the 'deviceready' event.
-    -->
+
     <feature name="http://api.phonegap.com/1.0/device" />
     <feature name="http://api.phonegap.com/1.0/network"/>
-    
+    -->
+
     <!--
         Platform Build Selection.
         By default PhoneGap Build builds your application for every platform.
@@ -49,7 +50,7 @@
     <preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
-    <preference name="phonegap-version"           value="3.0.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version"           value="3.6.3" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
@@ -70,7 +71,8 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
-    
+
+    <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="com.verso.cordova.clipboard" />
     
     <!-- Define app icon for each platform. -->
