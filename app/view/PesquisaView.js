@@ -28,8 +28,8 @@ Ext.define('GTTrans.view.PesquisaView', {
                     {
                         xtype: 'textfield',
                         id: 'tfPlaca',
-                        label: 'Placa',
-                        value:'JTY-8069'
+                        label: 'Placa'//,
+                        //value:'JTY-8069'
                     },
                     {
                         xtype: 'textfield',
@@ -42,8 +42,8 @@ Ext.define('GTTrans.view.PesquisaView', {
                     {
                         xtype: 'numberfield',
                         id: 'tfRenavam',
-                        label: 'Renavam',
-                        value: '704932903'
+                        label: 'Renavam'//,
+                        //value: '704932903'
                     }
                 ]
             },
